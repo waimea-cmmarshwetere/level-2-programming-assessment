@@ -33,14 +33,15 @@ fun main() {
 
 }
 
-fun setupBoxes(): MutableList<String> {
-    val boxList = mutableListOf<String>()
-    for (i in 1.. NUMBOXES) bxoList.add(EMPTY)
-    return boxList
-}
+//fun setupBoxes(): MutableList<String> {
+//    val boxList = mutableListOf<String>()
+//    for (i in 1.. NUMBOXES) boxList.add(EMPTY)
+//    return boxList
+//}
 
-fun showBoxesList(boxList: List<String>) {
-    println("+--------+--------+--------+--------+--------+--------+--------+--------+")
-    for (i in 0..boxList.size -1) {
-        print("|  ${i + 1} ".padEnd(9))
-    }
+
+//fun showBoxesList(boxList: List<String>) {
+//    println("+--------+--------+--------+--------+--------+--------+--------+--------+")
+//    for (i in 0..boxList.size -1) {
+//        print("|  ${i + 1} ".padEnd(9))
+//    }
