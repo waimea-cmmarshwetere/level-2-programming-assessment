@@ -22,19 +22,25 @@ fun main() {
     println()
 
     println("Enter Player 1 Name: ")
-    val player1 =readln()
+    val player1 = readln()
     println("Player 1: $player1")
 
     println("Enter Player 2 Name: ")
-    val player2 =readln()
+    val player2 = readln()
     println("Player 2: $player2")
 
 
-}
-
-fun readln(): String {
-
 
 }
 
+fun setupBoxes(): MutableList<String> {
+    val boxList = mutableListOf<String>()
+    for (i in 1.. NUMBOXES) bxoList.add(EMPTY)
+    return boxList
+}
 
+fun showBoxesList(boxList: List<String>) {
+    println("+--------+--------+--------+--------+--------+--------+--------+--------+")
+    for (i in 0..boxList.size -1) {
+        print("|  ${i + 1} ".padEnd(9))
+    }
