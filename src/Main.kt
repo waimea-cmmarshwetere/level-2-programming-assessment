@@ -22,15 +22,6 @@ fun main() {
     println("00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
     println()
 
-    val coins = setupBoxes()
-
-    coins.add("S")
-    coins.add("S")
-    coins.add("S")
-    coins.add("S")
-    coins.add("S")
-    coins.add("G")
-
 
 
     println("Enter Player 1 Name: ")
@@ -48,27 +39,36 @@ fun main() {
     println("Player 1: $player1")
     println("Player 2: $player2")
 
+    val boxes = setupBoxes()
+
+    showCoinBoxes(boxes)
+    println()
+
 
 
 }
 fun setupBoxes(): MutableList<String> {
     val boxList = mutableListOf<String>()
-    for (i in 1.. NUMBOXES - 6) boxList.add(EMPTY)
+    for (i in 1..NUMBOXES - 6) boxList.add(EMPTY)
     return boxList
+
 }
 
-fun placeCoinsInBoxes(boxList: MutableList<String>, boxNum: Int, coin: String) {
-    println("+++ Putting $coin into boxes $boxNum")
-    boxList[boxNum - 1] = coin
-}
-
-
-fun listAllBoxes(boxList: List<String>) {
-    for (i in 0..boxList.size) {
-        if (boxList[i] == EMPTY){
-            println("- ${i + 1}")
-        }
+fun showCoinBoxes(boxList: List<String>) {
+    println("+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+")
+    for (i in 0..boxList.size -1) {
+        print("|  ${i + 1} ".padEnd(9))
     }
-
+    println("|")
+    println("+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+")
+    for (i in 0..boxList.size -1) {
+        print("| ${boxList[i]} ".padEnd(9))
+    }
+    println("|")
+    println("+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+")
 
 }
+
+
+
+
