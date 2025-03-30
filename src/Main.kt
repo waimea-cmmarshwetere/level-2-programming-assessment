@@ -17,10 +17,22 @@ const val EMPTY = " "
 fun main() {
     println()
     println("OLD GOLD!")
-    println("00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+    println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------")
     println(" Welcome to Old Gold this is a two-player game, played on a one-dimensional grid with coins, where the aim is to win by being the player who removes the gold coin.")
-    println("00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+    println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------")
     println()
+
+    val coins = setupBoxes()
+
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Gold Coin")
+
+
+
 
 
 
@@ -39,10 +51,16 @@ fun main() {
     println("Player 1: $player1")
     println("Player 2: $player2")
 
+    println("")
+    println("Welcome $player1 and $player2 to Old Gold!")
+    println("")
+
     val boxes = setupBoxes()
 
     showCoinBoxes(boxes)
     println()
+
+
 
 
 
@@ -51,6 +69,12 @@ fun setupBoxes(): MutableList<String> {
     val boxList = mutableListOf<String>()
     for (i in 1..NUMBOXES - 6) boxList.add(EMPTY)
     return boxList
+
+}
+
+fun placeCoinsInBoxes(boxList: MutableList<String>, boxNum: Int, name: String) {
+    println("+++ Putting $name into cage $boxNum")
+    boxList[boxNum - 1] = name
 
 }
 
