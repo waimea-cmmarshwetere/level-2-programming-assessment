@@ -10,13 +10,13 @@ Terminology:
 
 ---
 
-## Example Test Name
+## Player Names
 
-Example test description. Example test description. Example test description. Example test description. Example test description. Example test description.
+Can the players input their names into the game and can the game display it on screen?
 
 ### Test Data To Use
 
-Details of test data and reasons for selection. Details of test data and reasons for selection. Details of test data and reasons for selection.
+
 
 ### Expected Test Result
 

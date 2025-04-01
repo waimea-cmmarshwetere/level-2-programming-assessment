@@ -1,3 +1,5 @@
+import java.util.Collections.shuffle
+
 /**
  * =====================================================================
  * Programming Project for NCEA Level 2, Standard 91896
@@ -22,20 +24,6 @@ fun main() {
     println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------")
     println()
 
-    val coins = setupBoxes()
-
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Gold Coin")
-
-
-
-
-
-
     println("Enter Player 1 Name: ")
     val player1 = readln()
     println("Welcome Player 1: $player1")
@@ -57,6 +45,16 @@ fun main() {
 
     val boxes = setupBoxes()
 
+    val coins = setupBoxes()
+
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Coin")
+    coins.add("Gold Coin")
+
+
     showCoinBoxes(boxes)
     println()
 
@@ -69,12 +67,6 @@ fun setupBoxes(): MutableList<String> {
     val boxList = mutableListOf<String>()
     for (i in 1..NUMBOXES - 6) boxList.add(EMPTY)
     return boxList
-
-}
-
-fun placeCoinsInBoxes(boxList: MutableList<String>, boxNum: Int, name: String) {
-    println("+++ Putting $name into cage $boxNum")
-    boxList[boxNum - 1] = name
 
 }
 
