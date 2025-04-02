@@ -43,9 +43,9 @@ fun main() {
     println("Welcome $player1 and $player2 to Old Gold!")
     println("")
 
-    val boxes = setupBoxes()
+    val boxes = setupPlayBoxes()
 
-    val coins = setupBoxes()
+    val coins = setupPlayBoxes()
 
     coins.add("Coin")
     coins.add("Coin")
@@ -63,25 +63,30 @@ fun main() {
 
 
 }
-fun setupBoxes(): MutableList<String> {
-    val boxList = mutableListOf<String>()
-    for (i in 1..NUMBOXES - 6) boxList.add(EMPTY)
-    return boxList
+fun setupPlayBoxes(): MutableList<String> {
+    val playBox = mutableListOf<String>()
+    for (i in 1..NUMBOXES - 6) playBox.add(EMPTY)
+    return playBox
 
 }
-
-fun showCoinBoxes(boxList: List<String>) {
-    println("+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+")
-    for (i in 0..boxList.size -1) {
-        print("|  ${i + 1} ".padEnd(9))
+fun listAllPlayBoxes(coinBoxList: List<String>) {
+    println(" ")
+    for (i in 0..coinBoxList.size -1) {
+        println("-  ${i + 1}: ${coinBoxList[i]}")
+    }
+}
+fun showCoinBoxes(coinBoxList: List<String>) {
+    println("+----".repeat(20)+ "+")
+    for (i in 0..coinBoxList.size -1) {
+        print("| ${i + 1} ".padEnd(5))
     }
     println("|")
-    println("+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+")
-    for (i in 0..boxList.size -1) {
-        print("| ${boxList[i]} ".padEnd(9))
+    println("+----".repeat(20)+ "+")
+    for (i in 0..coinBoxList.size -1) {
+        print("| ${coinBoxList[i]} ".padEnd(5))
     }
     println("|")
-    println("+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+")
+    println("+----".repeat(20)+ "+")
 
 }
 
