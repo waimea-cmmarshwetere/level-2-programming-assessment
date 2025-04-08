@@ -28,67 +28,81 @@ fun main() {
     val player1 = readln()
     println("Welcome Player 1: $player1")
 
-    println("")
+    println()
 
     println("Enter Player 2 Name: ")
     val player2 = readln()
     println("Welcome Player 2: $player2")
 
-    println("")
+    println()
 
     println("Player 1: $player1")
     println("Player 2: $player2")
 
-    println("")
+    println()
     println("Welcome $player1 and $player2 to Old Gold!")
-    println("")
-
-    val boxes = setupPlayBoxes()
+    println()
 
     val coins = setupPlayBoxes()
 
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Coin")
-    coins.add("Gold Coin")
+    coins.add("C1")
+    coins.add("C2")
+    coins.add("C3")
+    coins.add("C4")
+    coins.add("C5")
+    coins.add("G")
 
+    listAllCoins(coins)
+    coins.shuffle()
 
-    showCoinBoxes(boxes)
+    showCoinBoxes(coins)
     println()
+    
+
+
+
+
 
 
 
 
 
 }
+
+
 fun setupPlayBoxes(): MutableList<String> {
     val playBox = mutableListOf<String>()
     for (i in 1..NUMBOXES - 6) playBox.add(EMPTY)
     return playBox
 
-}
-fun listAllPlayBoxes(coinBoxList: List<String>) {
-    println(" ")
-    for (i in 0..coinBoxList.size -1) {
-        println("-  ${i + 1}: ${coinBoxList[i]}")
-    }
-}
-fun showCoinBoxes(coinBoxList: List<String>) {
-    println("+----".repeat(20)+ "+")
-    for (i in 0..coinBoxList.size -1) {
-        print("| ${i + 1} ".padEnd(5))
-    }
-    println("|")
-    println("+----".repeat(20)+ "+")
-    for (i in 0..coinBoxList.size -1) {
-        print("| ${coinBoxList[i]} ".padEnd(5))
-    }
-    println("|")
-    println("+----".repeat(20)+ "+")
 
 }
+
+fun showCoinBoxes(coinBoxList: List<String>) {
+
+        println("GAME BOARD!")
+        println("-----".repeat(20) + "+")
+        for (i in 0..coinBoxList.size - 1) {
+            print("| ${i + 1} ".padEnd(5))
+        }
+        println("|")
+        println("+----".repeat(20) + "+")
+        for (i in 0..coinBoxList.size - 1) {
+            print("| ${coinBoxList[i]} ".padEnd(5))
+        }
+        println("|")
+        println("-----".repeat(20) + "+")
+
+}
+fun listAllCoins(coinBoxList: List<String>) {
+    println("COINS")
+    for (coins in coinBoxList) {
+        if (coins == EMPTY) continue
+        println("-$coins")
+    }
+
+}
+
 
 
 
