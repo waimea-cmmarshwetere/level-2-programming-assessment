@@ -9,7 +9,7 @@ import java.util.Collections.shuffle
  * GitHub Repo:    https://github.com/waimea-cmmarshwetere/level-2-programming-assessment
  * ---------------------------------------------------------------------
  * Notes:
- * PROJECT NOTES HERE
+ *
  * =====================================================================
  */
 
@@ -57,17 +57,44 @@ fun main() {
 
     showCoinBoxes(coins)
     println()
-    
 
+    var currentPlayer = player1
+    while (true) {
+        println("$currentPlayer's turn. Please enter the index of the coin you want to move (1-${coins.size}):")
+        val coinIndex = readln().toIntOrNull()?.minus(1) ?: continue
 
+        if (coinIndex < 0 || coinIndex >= coins.size || coins[coinIndex] == EMPTY) {
+            println("Invalid coin selection. Please try again.")
+            continue
+        }
 
+        println("Please enter the new position (1-${coins.size}):")
+        val newPosition = readln().toIntOrNull()?.minus(1) ?: continue
 
+        if (newPosition < 0 || newPosition >= coins.size || coins[newPosition] != EMPTY) {
+            println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
+            continue
+        }
 
+        // Move the coin
+        coins[newPosition] = coins[coinIndex]
+        coins[coinIndex] = EMPTY
 
+        showCoinBoxes(coins)
+        println()
 
+        // Check for win condition (if the gold coin is removed)
+        val square1 = (0)
+        if (coins[square1] == "G") {
+            println("$currentPlayer has removed the gold coin! $currentPlayer wins!")
+            break
+        }
 
-
+        // Switch players
+        currentPlayer = if (currentPlayer == player1) player2 else player1
+    }
 }
+
 
 
 fun setupPlayBoxes(): MutableList<String> {
@@ -102,6 +129,10 @@ fun listAllCoins(coinBoxList: List<String>) {
     }
 
 }
+
+
+
+
 
 
 

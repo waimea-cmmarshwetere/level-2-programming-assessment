@@ -11,8 +11,8 @@ This checklist can be used to gauge progress towards different levels of success
 The game functions correctly and meets the specification:
 - [ ] The game is **playable**
 - [ ] The **instructions** for the game are available in-game
-- [ ] **Two players** can play
-- [ ] Player **names** are used to identify each player
+- [x] **Two players** can play
+- [x] Player **names** are used to identify each player
 - [ ] Players **take turns** to play
 - [ ] Players provides **input data** to the game (e.g. moves to make)
 - [ ] The **current status** of the game is shown after each play
@@ -22,7 +22,7 @@ The game functions correctly and meets the specification:
 
 The program stores data using:
 - [ ] **Variables** of at least two types (e.g. int, text, boolean)
-- [ ] At least one **data collection** (array / list) to store some elements of the game data
+- [x] At least one **data collection** (array / list) to store some elements of the game data
 
 The program structure:
 - [ ] Is broken up into **functions**: a main function, plus other supporting functions 
@@ -42,7 +42,7 @@ The program code:
 
 The program has been tested and there is documented evidence that:
 - [ ] The game is **fully functional**, showing testing of:
-  - [ ] game setup
+  - [x] game setup
   - [ ] player moves
   - [ ] players taking turns
   - [ ] scoring (if any)
