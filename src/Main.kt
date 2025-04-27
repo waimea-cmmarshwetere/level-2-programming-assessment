@@ -24,6 +24,7 @@ fun main() {
     println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------")
     println()
 
+
     println("Enter Player 1 Name: ")
     val player1 = readln()
     println("Welcome Player 1: $player1")
@@ -45,11 +46,11 @@ fun main() {
 
     val coins = setupPlayBoxes()
 
-    coins.add("C1")
-    coins.add("C2")
-    coins.add("C3")
-    coins.add("C4")
-    coins.add("C5")
+    coins.add("C")
+    coins.add("C")
+    coins.add("C")
+    coins.add("C")
+    coins.add("C")
     coins.add("G")
 
     listAllCoins(coins)
@@ -88,6 +89,10 @@ fun main() {
         if (coins[square1] == "G") {
             println("$currentPlayer has removed the gold coin! $currentPlayer wins!")
             break
+        }
+        val square1 = (0)
+        if (coins[square1] == "C") {
+            println("$currentPlayer has removed a silver coin!")
         }
 
         // Switch players
