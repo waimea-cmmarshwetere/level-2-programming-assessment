@@ -4,21 +4,20 @@ The test results show the actual outcome of the testing, following the [Test Pla
 
 ---
 
-## Example Test Name
+## Test Name
+![Animation.gif](screenshots/Animation.gif)
 
-Example test description. Example test description.Example test description. Example test description.Example test description. Example test description.
+This test is showing that the code for putting in the players name (player1 and player2) works
 
 ### Test Data Used
+
 
 Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data.
 
 ### Test Result
 
-![Animation.gif](screenshots/Animation.gif)
 
 Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result.
-
----
 
 ## Example Test Name
 

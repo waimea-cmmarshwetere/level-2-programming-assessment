@@ -17,12 +17,19 @@ const val NUMBOXES = 20
 const val EMPTY = " "
 
 fun main() {
-    println()
+    println("=========================================================================================================================================================================")
     println("OLD GOLD!")
     println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------")
     println(" Welcome to Old Gold this is a two-player game, played on a one-dimensional grid with coins, where the aim is to win by being the player who removes the gold coin.")
     println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------")
-    println()
+    println("=========================================================================================================================================================================")
+    println("RULES!")
+    println("Players take turns.")
+    println("A turn can be either: Removing a coin from the left square (if there is one) or")
+    println("sliding any coin left.")
+    println("Coins can slide any number of empty squares.")
+    println("Coins cannot jump on or over another coin.")
+    println("=========================================================================================================================================================================")
 
 
     println("Enter Player 1 Name: ")
@@ -44,6 +51,7 @@ fun main() {
     println("Welcome $player1 and $player2 to Old Gold!")
     println()
 
+
     val coins = setupPlayBoxes()
 
     coins.add("C")
@@ -53,11 +61,13 @@ fun main() {
     coins.add("C")
     coins.add("G")
 
+
     listAllCoins(coins)
     coins.shuffle()
 
     showCoinBoxes(coins)
     println()
+    
 
     var currentPlayer = player1
     while (true) {
@@ -85,15 +95,20 @@ fun main() {
         println()
 
         // Check for win condition (if the gold coin is removed)
+
+
         val square1 = (0)
         if (coins[square1] == "G") {
             println("$currentPlayer has removed the gold coin! $currentPlayer wins!")
             break
         }
-        val square1 = (0)
-        if (coins[square1] == "C") {
+        val square2 = (0)
+        if (coins[square2] == "C") {
             println("$currentPlayer has removed a silver coin!")
+
         }
+
+        val
 
         // Switch players
         currentPlayer = if (currentPlayer == player1) player2 else player1
@@ -134,6 +149,7 @@ fun listAllCoins(coinBoxList: List<String>) {
     }
 
 }
+
 
 
 
