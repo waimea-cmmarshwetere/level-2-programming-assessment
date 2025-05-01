@@ -5,27 +5,26 @@ The test results show the actual outcome of the testing, following the [Test Pla
 ---
 
 ## Test Name
-![Animation.gif](screenshots/Animation.gif)
+
 
 This test is showing that the code for putting in the players name (player1 and player2) works
 
 ### Test Data Used
 
+I ran the code to test.
 
-Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data.
 
 ### Test Result
 
-
-Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result. Comment on test result.
+![Animation.gif](screenshots/Animation.gif)
 
 ## Example Test Name
 
-Example test description. Example test description.Example test description. Example test description.Example test description. Example test description.
+This test is to show the coins moving
 
 ### Test Data Used
 
-Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data.
+I ran the code to test
 
 ### Test Result
 

@@ -67,9 +67,12 @@ fun main() {
 
     showCoinBoxes(coins)
     println()
-    
 
-    var currentPlayer = player1
+    setupPlayBoxes()
+    println()
+
+
+        var currentPlayer = player1
     while (true) {
         println("$currentPlayer's turn. Please enter the index of the coin you want to move (1-${coins.size}):")
         val coinIndex = readln().toIntOrNull()?.minus(1) ?: continue
@@ -86,13 +89,6 @@ fun main() {
             println("Invalid move. The target position is either out of bounds or not empty. Please try again.")
             continue
         }
-
-        // Move the coin
-        coins[newPosition] = coins[coinIndex]
-        coins[coinIndex] = EMPTY
-
-        showCoinBoxes(coins)
-        println()
 
         // Check for win condition (if the gold coin is removed)
 
@@ -117,6 +113,8 @@ fun main() {
 
 
 
+
+// Sets up boxes
 fun setupPlayBoxes(): MutableList<String> {
     val playBox = mutableListOf<String>()
     for (i in 1..NUMBOXES - 6) playBox.add(EMPTY)
@@ -124,7 +122,7 @@ fun setupPlayBoxes(): MutableList<String> {
 
 
 }
-
+// Shows the coins randomly in the boxes
 fun showCoinBoxes(coinBoxList: List<String>) {
 
         println("GAME BOARD!")
@@ -140,6 +138,8 @@ fun showCoinBoxes(coinBoxList: List<String>) {
         println("|")
         println("-----".repeat(20) + "+")
 
+
+//Lists all coins
 }
 fun listAllCoins(coinBoxList: List<String>) {
     println("COINS")
@@ -149,6 +149,10 @@ fun listAllCoins(coinBoxList: List<String>) {
     }
 
 }
+
+
+
+
 
 
 

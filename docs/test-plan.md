@@ -11,31 +11,17 @@ Terminology:
 ---
 
 ## Player Names
-
+![Animation.gif](screenshots/Animation.gif)
 Can the players input their names into the game and can the game display it on screen?
 
-### Test Data To Use
+### Bored display
+![Animation.2.gif](screenshots/Animation.2.gif)
+Does the board display with the coins in the boxes?
+
+### Coins
+
+Do the coins randomly get added to the board when starting game?
 
 
-
-### Expected Test Result
-
-Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. 
-
----
-
-## Example Test Name
-
-Example test description. Example test description. Example test description. Example test description. Example test description. Example test description.
-
-### Test Data To Use
-
-Details of test data and reasons for selection. Details of test data and reasons for selection. Details of test data and reasons for selection.
-
-### Expected Test Result
-
-Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. Statement detailing what should happen. 
-
----
 
 
